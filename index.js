@@ -2,6 +2,8 @@ import express from "express";
 const app = express();
 import * as dotenv from "dotenv";
 dotenv.config();
+import dbConnect from "./config/dbConnect.js";
+dbConnect();
 
 app.use("/", (req, res) => {
   res.send("Hai");
