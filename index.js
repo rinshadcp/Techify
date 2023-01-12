@@ -1,8 +1,7 @@
-import express from "express";
+const express = require("express");
+const dbConnect = require("./config/dbConnect");
 const app = express();
-import * as dotenv from "dotenv";
-dotenv.config();
-import dbConnect from "./config/dbConnect.js";
+const dotenv = require("dotenv").config();
 dbConnect();
 
 app.use("/", (req, res) => {
